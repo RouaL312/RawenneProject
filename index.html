@@ -10,6 +10,7 @@
     <style data-tag="reset-style-sheet">
       html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
+
     <style data-tag="default-style-sheet">
       html {
         font-family: Poppins;
@@ -28,6 +29,34 @@
 
       }
     </style>
+        <style>
+          .popup {
+              position: fixed;
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: rgba(0, 0, 0, 0.4);
+              display: none;
+          }
+          .popup-content {
+              background-color: white;
+              margin: 10% auto;
+              padding: 20px;
+              border: 1px solid #888888;
+              width: 30%;
+              font-weight: bolder;
+          }
+          .popup-content button {
+              display: block;
+              margin: 0 auto;
+          }
+          .show {
+              display: block;
+          }
+      </style>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
@@ -42,7 +71,7 @@
       <div class="landing-page-container">
         <div class="landing-page-top-container">
           <nav data-role="Header" class="landing-page-navbar">
-            <h1>Aventure</h1>
+            <h1>Be تونسي</h1>
             <div class="landing-page-right-side"></div>
             <div data-role="BurgerMenu" class="landing-page-burger-menu">
               <svg viewBox="0 0 1024 1024" class="landing-page-burger-menu1">
@@ -142,7 +171,7 @@
           </nav>
           <div class="landing-page-hero">
             <div class="landing-page-content-container">
-              <h1 class="Heading landing-page-text5">Aventure</h1>
+              <h1 class="Heading landing-page-text5">Be تونسي</h1>
               <h2 class="landing-page-subheading">Let's have fun</h2>
               <a href="#main-section" class="landing-page-link4">
                 <div class="solid-button-container">
@@ -165,7 +194,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Barkoukech</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button"id="myButtonBarboukech">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -182,7 +211,7 @@
                   <span>Couscous à l’escargot</span>
                 </span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonCouscous">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -197,7 +226,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Raisins</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonRaisin">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -212,7 +241,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Poivrons rouge</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonPoivrons">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -227,7 +256,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Fleur</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonFleur">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -242,7 +271,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Bléé</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonBlee">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -255,9 +284,9 @@
                 class="place-card-image"
               />
               <div class="place-card-container1">
-                <span class="place-card-text"><span>Jarra</span></span>
+                <span class="place-card-text"><span>Kolla</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonJarra">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -272,7 +301,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Tapis</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonTapis">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -287,7 +316,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Phosphate</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonPhosphate">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -302,7 +331,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Margoum</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonMargoum">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -317,7 +346,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Pomme</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonPomme">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -332,7 +361,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Fraise</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonFraise">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -347,7 +376,22 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Montre</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonMontre">
+                    <span>Solution</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="place-card-container">
+              <img
+                alt="image"
+                src="public/images/sidibouzid.jpg"
+                class="place-card-image"
+              />
+              <div class="place-card-container1">
+                <span class="place-card-text"><span>Revolution</span></span>
+                <div class="outline-button-container">
+                  <button class="outline-button-button button Button"id="myButtonRevolution">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -362,7 +406,7 @@
               <div class="place-card-container1">
                 <span class="place-card-text"><span>Artiste</span></span>
                 <div class="outline-button-container">
-                  <button class="outline-button-button button Button">
+                  <button class="outline-button-button button Button" id="myButtonArtiste">
                     <span>Solution</span>
                   </button>
                 </div>
@@ -372,7 +416,7 @@
         </div>
         <div class="landing-page-footer">
           <div class="landing-page-menu">
-            <h1>Aventure</h1>
+            <h1>Be تونسي</h1>
             <div class="landing-page-links-container1">
               <a
                 href="https://example.com"
@@ -437,6 +481,89 @@
         </div>
       </div>
     </div>
+    <div id="myPopup" class="popup">
+      <div class="popup-content">
+          <h1 style="color:green;">
+                La Solution est 
+            </h1>
+            <p id="selectedSolution"></p>
+            <button id="closePopup">
+                Close
+            </button>
+      </div>
+  </div>
     <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+    <script>
+          var selectedSolutionElement = document.getElementById("selectedSolution");
+
+      document.getElementById("myButtonBarboukech").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Gabes";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonCouscous").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Hammamet";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonRaisin").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Raisin"
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonArtiste").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Aziz Gourji";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonRevolution").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "SidiBouzid";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonMontre").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Tastour";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonFraise").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Korba";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonPomme").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Sbiba";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonMargoum").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Jem";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonPhosphate").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Gafsa";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonTapis").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Kourain";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonJarra").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Jerba";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonBlee").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Béja";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonFleur").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Ariana";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      document.getElementById("myButtonPoivrons").addEventListener("click", function () {
+        selectedSolutionElement.innerText = "Nabeul";
+        document.getElementById("myPopup").classList.add("show");
+      });
+      closePopup.addEventListener("click", function () {
+          myPopup.classList.remove("show");
+      });
+      window.addEventListener("click", function (event) {
+          if (event.target == myPopup) {
+              myPopup.classList.remove("show");
+          }
+      });
+  </script>
   </body>
 </html>

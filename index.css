@@ -86,7 +86,7 @@
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
   background-size: cover;
-  background-image: url('https://cdn.mappr.co/wp-content/uploads/2023/01/tunisia-pin-world-map.jpg?w=768&h=512&scale.option=fill&cw=768&ch=512&cx=center&cy=center');
+  background-image: url('./public/images/background.jpg');
   background-position: 0% 40%;
 }
 .landing-page-navbar {
@@ -100,7 +100,7 @@
 }
 .landing-page-right-side {
   border: 2px dashed rgba(120, 120, 120, 0.4);
-  display: flex;
+  //display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -221,7 +221,7 @@
   flex: 1;
   width: 1068px;
   height: 572px;
-  display: flex;
+  //display: flex;
   max-width: 1000px;
   align-items: center;
   padding-top: var(--dl-space-space-tripleunit);
@@ -230,7 +230,7 @@
   flex-direction: row;
   padding-bottom: var(--dl-space-space-tripleunit);
   justify-content: flex-start;
-  background-image: linear-gradient(45deg, rgb(189, 195, 199) 0.00%,rgba(44, 80, 65, 0) 66.00%,rgba(44, 80, 65, 0) 100.00%);
+ // background-image: linear-gradient(45deg, rgb(189, 195, 199) 0.00%,rgba(44, 80, 65, 0) 66.00%,rgba(44, 80, 65, 0) 100.00%);
 }
 .landing-page-content-container {
   display: flex;
@@ -241,7 +241,7 @@
   color: var(--dl-color-gray-black);
   width: 324px;
   font-size: 1.6rem;
-  box-shadow: rgb(212, 212, 212) 5px 5px 10px 0px;
+  //box-shadow: rgb(212, 212, 212) 5px 5px 10px 0px;
   font-family: "Poppins";
   font-weight: 400;
   text-transform: none;
