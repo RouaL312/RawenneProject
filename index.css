@@ -86,7 +86,7 @@
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
   background-size: cover;
-  background-image: url('./public/images/background.jpg');
+  background-image: url('./public/images/cov.png');
   background-position: 0% 40%;
 }
 .landing-page-navbar {
